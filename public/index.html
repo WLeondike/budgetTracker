@@ -10,20 +10,33 @@
       href="icons/icon-192x192.png"
       type="image/x-icon"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="manifest" href="manifest.webmanifest" />
-
     <title>Budget Tracker</title>
   </head>
+
   <body>
+    <div class="container text-center mt-3">
+      <h1 class="text-primary">Budget Tracker</h1>
+      <hr />
+    </div>
+    
     <div class="wrapper">
       <div class="total">
-        <div class="total">Your total is: $<span id="total">0</span></div>
+        <div class="total">
+          <h3>
+            Your total is: $
+            <span id="total">0</span>
+          </h3>
+        </div>
       </div>
 
       <div class="form">
@@ -34,10 +47,12 @@
           id="t-amount"
           placeholder="Transaction amount"
         />
-        <button id="add-btn">
+        <button class="btn btn-success" id="add-btn">
           <i class="fa fa-plus buttons"></i> Add Funds
         </button>
-        <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
+        <button class="btn btn-danger" id="sub-btn">
+          <i class="fa fa-minus"></i> Subtract Funds
+        </button>
         <p class="error"></p>
       </div>
 
